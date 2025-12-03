@@ -48,7 +48,16 @@ print(f"Your full ssn is: {text} and Your last 4 ssn is:{last_four_ssn}")
 
 
 def is_digit(text):
-    
+    pattern = r'\d+'
+    result = re.match(pattern,text)
+    if result is not None:
+        return True
+    return False
+
+print("is_digit")
+print(is_digit("Kemoy Campbell"))
+print(is_digit("12345678"))
+print(is_digit("Kemoy Campbell 12"))
 
 
 
